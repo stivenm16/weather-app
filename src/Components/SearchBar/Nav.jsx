@@ -7,10 +7,13 @@ class Nav extends React.Component {
     }
     render(){
         return (
-            <div className="container-header">
+          <div className="container-header">
+            <div className="box">
                 <input type="text" placeholder="City" onChange={this.onSearch} className='input'/>
                 <button type="submit"className="submit">Add</button>
-            </div>)
+            </div>
+          </div>  
+          )
       }
     };
 

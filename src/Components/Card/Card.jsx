@@ -7,16 +7,16 @@ class Card extends React.Component {
     }
     render(){
         return (
-          <div>
+          <div className="card">
             <button>X</button>
             <h2>{this.props.name}</h2>
-            <div>
-                <div>
+            <div className="container-bottom">
+                <div className="temp-min">
                     <h2>Min</h2>
                     <h2>{this.props.min}°</h2>
                 </div>
-                <div>
-                    <h2>Min</h2>
+                <div className="temp-max">
+                    <h2>Max</h2>
                     <h2>{this.props.max}°</h2>
                 </div>
                 <img src="#" />

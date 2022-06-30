@@ -1,5 +1,7 @@
 import React from 'react';
 import Card from '../Card/Card';
+import './Cards.css'
+
 
 
 class Cards extends React.Component {
@@ -8,7 +10,7 @@ class Cards extends React.Component {
     }
     render(){
         return (
-            <div>
+            <div className='cards'>
             {this.props.cities.map(c => 
               <Card
               max={c.main.temp_max}
