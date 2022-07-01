@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css'
 import Cards from './Components/Cards/Cards'
 import Nav from './Components/SearchBar/Nav'
+import cities from './data.js';
 import data, {Cairns} from './data.js'
 
 
@@ -68,7 +69,7 @@ class App extends React.Component {
         onSearch={this.onSearch}
         />
         <Cards
-        cities = {data}
+        cities = {cities}
         />
         </div>
         
