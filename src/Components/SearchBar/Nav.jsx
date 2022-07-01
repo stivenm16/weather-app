@@ -2,11 +2,13 @@ import React from "react";
 import './Nav.css'
 
 class Nav extends React.Component {
-    constructor({onSearch}) {
-      super(onSearch);
+    constructor(props) {
+      super(props);
       this.state = {
         city: ''
       }
+      // onSearch = onSearch.bind(this)
+      // console.log(onSearch('Bogota'))
     }
     updateState = (e) => {
       this.setState({
@@ -22,7 +24,8 @@ class Nav extends React.Component {
           className="container-header"
           onSubmit={(e) => {
           e.preventDefault();
-          onSearch(city); 
+          console.log(this.props.onSearch( () => 'Lima'))
+          // onSearch(this.state.city); 
           this.setState({city:''})
           }}
           >
