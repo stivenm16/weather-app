@@ -5,6 +5,7 @@ import './City.css'
 class City extends React.Component {
     constructor(props) {
       super(props);
+      console.log(this.props)
     }
     render(){
         return(
@@ -13,21 +14,21 @@ class City extends React.Component {
                <div className="container">
                 
                 
-                <p className="title">{this.props.name}</p>
+                <p className="title">{this.props.city.name}</p>
                 <div className="container-temp">
-                    <p>Temp: {this.props.temp}°</p>
-                    <p>Temp max: {this.props.max}°</p>
-                    <p>Temp min: {this.props.min}°</p>
+                    <p>Temp: {this.props.city.temp}°</p>
+                    <p>Temp max: {this.props.city.max}°</p>
+                    <p>Temp min: {this.props.city.min}°</p>
                 </div>
-                <img className="iconoClima" src={"http://openweathermap.org/img/wn/"+this.props.img+"@2x.png"} width="80" height="80" alt="" />    
+                <img className="iconoClima" src={"http://openweathermap.org/img/wn/"+this.props.city.img+"@2x.png"} width="80" height="80" alt="" />    
                 <div className="container-bottom-city">
                     <div>
-                        <p>Wind: {this.props.wind}</p>
-                        <p>Clouds: {this.props.clouds}</p>
+                        <p>Wind: {this.props.city.wind}</p>
+                        <p>Clouds: {this.props.city.clouds}</p>
                     </div>
                     <div>
-                        <p>Longitud: {this.props.longitud}</p>
-                        <p>Latitud: {this.props.latitud}</p>
+                        <p>Longitud: {this.props.city.longitud}</p>
+                        <p>Latitud: {this.props.city.latitud}</p>
                     </div>
                 </div>
             </div>

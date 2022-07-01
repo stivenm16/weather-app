@@ -19,10 +19,11 @@ class Cards extends React.Component {
               min={c.min}
               name={c.name}
               img={c.img}
+              id= {c.id}
               onClose={() => this.props.onClose(c.id)}
               key = {c.id}
             />)}
-            
+
             </div>)
       }
     };

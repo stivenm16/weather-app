@@ -21,8 +21,11 @@ class App extends React.Component {
   }
 
   onFilter = (ciudadId) => {
-    console.log(ciudadId)
+
+    
     let ciudadD = this.state.cities.filter(c => c.id === parseInt(ciudadId));
+    
+    
     if(ciudadD.length > 0) {
         return ciudadD[0];
     } else {
@@ -85,11 +88,10 @@ class App extends React.Component {
           <Route
           exact path='/ciudad/:ciudadId'
           render={ (props) => 
-          // <City
-          console.log(props.match.params)
-          // city={this.onFilter(props.match.params.ciudadId)
-          // }
-          // />
+          <City
+          city={this.onFilter(props.match.params.ciudadId)
+          }
+          />
           }
         />
         
