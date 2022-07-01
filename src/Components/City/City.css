@@ -1,0 +1,31 @@
+.city{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: #FFF;
+    width: 35%;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 28px;
+    transition: 1s;
+}
+
+.container:hover {
+    transform: translateY(-3px);
+}
+
+.container-temp {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.container-bottom-city {
+    display: flex;
+    gap: 6.5rem;
+    margin: 1rem;
+}

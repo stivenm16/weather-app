@@ -2,13 +2,15 @@ import React from 'react';
 import './City.css'
 
 
-class Card extends React.Component {
+class City extends React.Component {
     constructor(props) {
       super(props);
     }
     render(){
         return(
-                <div className="container">
+
+            <div className='city'>
+               <div className="container">
                 
                 
                 <p className="title">{this.props.name}</p>
@@ -18,7 +20,7 @@ class Card extends React.Component {
                     <p>Temp min: {this.props.min}°</p>
                 </div>
                 <img className="iconoClima" src={"http://openweathermap.org/img/wn/"+this.props.img+"@2x.png"} width="80" height="80" alt="" />    
-                <div className="container-bottom">
+                <div className="container-bottom-city">
                     <div>
                         <p>Wind: {this.props.wind}</p>
                         <p>Clouds: {this.props.clouds}</p>
@@ -29,6 +31,9 @@ class Card extends React.Component {
                     </div>
                 </div>
             </div>
+            </div>
         )
     }    
 }
+
+export default City
