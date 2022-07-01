@@ -8,8 +8,8 @@ class Card extends React.Component {
     render(){
         return (
           <div className="card">
-            <button>X</button>
-            <h2>{this.props.name}</h2>
+            <button className="close-btn">X</button>
+            <h2 className="title">{this.props.name}</h2>
             <div className="container-bottom">
                 <div className="temp-min">
                     <h2>Min</h2>
@@ -19,7 +19,7 @@ class Card extends React.Component {
                     <h2>Max</h2>
                     <h2>{this.props.max}°</h2>
                 </div>
-                <img src="#" />
+                <img src={`http://openweathermap.org/img/wn/${this.props.img}@2x.png`}/>
             </div>
           </div>
         )
