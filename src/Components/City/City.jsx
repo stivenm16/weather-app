@@ -5,20 +5,20 @@ import './City.css'
 class City extends React.Component {
     constructor(props) {
       super(props);
-      console.log(this.props)
+
     }
     render(){
         return(
 
             <div className='city'>
-               <div className="container">
+               <div className="container-city">
+                <h2 className="title-city">{this.props.city.name}</h2>
                 
                 
-                <p className="title">{this.props.city.name}</p>
                 <div className="container-temp">
-                    <p>Temp: {this.props.city.temp}°</p>
-                    <p>Temp max: {this.props.city.max}°</p>
-                    <p>Temp min: {this.props.city.min}°</p>
+                    <p className='temp-exact'>Temp: {this.props.city.temp}°</p>
+                    <p className='temp-exact'>Temp max: {this.props.city.max}°</p>
+                    <p className='temp-exact'>Temp min: {this.props.city.min}°</p>
                 </div>
                 <img className="iconoClima" src={"http://openweathermap.org/img/wn/"+this.props.city.img+"@2x.png"} width="80" height="80" alt="" />    
                 <div className="container-bottom-city">

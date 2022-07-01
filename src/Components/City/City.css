@@ -2,9 +2,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: default;
 }
 
-.container {
+.container-city {
     background-color: #FFF;
     width: 35%;
     flex-direction: column;
@@ -28,4 +29,23 @@
     display: flex;
     gap: 6.5rem;
     margin: 1rem;
+}
+
+.title-city{
+    position: relative;
+    font-size: 28px;
+    margin-bottom: 1rem;
+    margin-top: 1.5rem;
+    
+}
+
+.temp-exact{
+    transition: .2s;
+    cursor:default;
+}
+
+.temp-exact:hover {
+    font-weight: 400;
+    color: #2D3047;
+    transform: translateY(-1px);
 }
