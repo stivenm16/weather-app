@@ -3,6 +3,7 @@
     justify-content: center;
     align-items: center;
     cursor: default;
+    margin-bottom: 1rem;
 }
 
 .container-city {
@@ -14,6 +15,7 @@
     align-items: center;
     border-radius: 28px;
     transition: 1s;
+    
 }
 
 .container:hover {
@@ -27,8 +29,10 @@
 
 .container-bottom-city {
     display: flex;
-    gap: 6.5rem;
+    gap: 1rem;
     margin: 1rem;
+    margin-top: 0;
+
 }
 
 .title-city{
@@ -36,8 +40,14 @@
     font-size: 28px;
     margin-bottom: 1rem;
     margin-top: 1.5rem;
+    transition: 1s;
+}
+
+.title-city:hover {
+    color: #2D3047;
     
 }
+
 
 .temp-exact{
     transition: .2s;
@@ -48,4 +58,22 @@
     font-weight: 400;
     color: #2D3047;
     transform: translateY(-1px);
+}
+
+.wind-box, .lat-box {
+    background-color: #2d3047be;
+    color: #FFF;
+    font-weight: 700;
+    font-size: 14px;
+    border-radius: 50%;
+    min-width: 9rem;
+    min-height: 9rem;
+    margin: 1rem;
+    padding: .5rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    
 }
