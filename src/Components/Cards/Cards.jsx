@@ -11,11 +11,8 @@ class Cards extends React.Component {
     render(){
         return (
             <div className='cards'>
-            {
-              console.log(this.props.cities) 
-            }
-            {
             
+            {
             this.props.cities.map(c => 
               <Card
               max={c.max}
@@ -25,6 +22,7 @@ class Cards extends React.Component {
               onClose={() => this.props.onClose(c.id)}
               key = {c.id}
             />)}
+            
             </div>)
       }
     };
