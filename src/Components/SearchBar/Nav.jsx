@@ -1,5 +1,7 @@
 import React from "react";
 import './Nav.css'
+import  Logo from '../../Icons/github.png'
+
 
 class Nav extends React.Component {
     constructor(props) {
@@ -17,14 +19,16 @@ class Nav extends React.Component {
     render() {
         return (
 
-          <form 
-          className="container-header"
-          onSubmit={(e) => {
-          e.preventDefault();
-          this.props.onSearch(this.state.city); 
-          this.setState({city:''})
-          }}
-          >
+            <div className="header">
+              <img src={Logo} alt="" className="icon-github" />
+              <form 
+              className="container-header"
+              onSubmit={(e) => {
+              e.preventDefault();
+              this.props.onSearch(this.state.city); 
+              this.setState({city:''})
+              }}
+              >
 
             <div className="box">
 
@@ -43,6 +47,8 @@ class Nav extends React.Component {
                 </button>
             </div>
           </form>  
+        </div>
+          
           )
       }
     };
