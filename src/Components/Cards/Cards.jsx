@@ -22,7 +22,7 @@ class Cards extends React.Component {
               min={c.min}
               name={c.name}
               img={c.img}
-              // onClose={() => alert(c.name)}
+              onClose={() => this.props.onClose(c.id)}
               key = {c.id}
             />)}
             </div>)

@@ -8,7 +8,7 @@ class Card extends React.Component {
     render(){
         return (
           <div className="card">
-            <button className="close-btn">X</button>
+            <button className="close-btn" onClick={this.props.onClose}>X</button>
             <h2 className="title">{this.props.name}</h2>
             <div className="container-bottom">
                 <div className="temp-min">

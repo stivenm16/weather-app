@@ -2,10 +2,6 @@ import React from 'react';
 import './App.css'
 import Cards from './Components/Cards/Cards'
 import Nav from './Components/SearchBar/Nav'
-import {Denver} from './data'
-
-
-
 
 
 class App extends React.Component {
@@ -20,9 +16,9 @@ class App extends React.Component {
   }
 
   
-  // onClose = (id)  => {
-  //   this.setState(oldCities => oldCities.filter(c => c.id !== id));
-  // }
+  onClose = (id)  => {
+    this.setState({cities : this.state.cities.filter(c => c.id !== id)});
+  }
 
   onSearch = (ciudad) => {
     
@@ -32,7 +28,7 @@ class App extends React.Component {
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${ciudad}&appid=${apiKey}`)
     .then(r => r.json())
     .then((recurso) => {
-      // console.log(recurso)
+      
       if(recurso.main !== undefined ){ // && repeated === false
         const ciudad = {
           min: Math.round(recurso.main.temp_min),
@@ -50,8 +46,8 @@ class App extends React.Component {
         
         
         // setCities(oldCities => oldCities.filter(c => c.id === recurso.main.id));
-        // this.updateState(e);
-        // setRepeated(true)
+  
+  
         this.setState({cities: [...this.state.cities, ciudad]})
         
       } else {
@@ -71,6 +67,7 @@ class App extends React.Component {
         />
         <Cards
         cities = {this.state.cities}
+        onClose = {this.onClose}
         />
         </div>
         
