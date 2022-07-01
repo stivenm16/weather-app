@@ -11,13 +11,18 @@ class Cards extends React.Component {
     render(){
         return (
             <div className='cards'>
-            {this.props.cities.map(c => 
+            {
+              console.log(this.props.cities) 
+            }
+            {
+            
+            this.props.cities.map(c => 
               <Card
-              max={c.main.temp_max}
-              min={c.main.temp_min}
+              max={c.max}
+              min={c.min}
               name={c.name}
-              img={c.weather[0].icon}
-              onClose={() => alert(c.name)}
+              img={c.img}
+              // onClose={() => alert(c.name)}
               key = {c.id}
             />)}
             </div>)

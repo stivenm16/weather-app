@@ -24,8 +24,7 @@ class Nav extends React.Component {
           className="container-header"
           onSubmit={(e) => {
           e.preventDefault();
-          console.log(this.props.onSearch( () => 'Lima'))
-          // onSearch(this.state.city); 
+          this.props.onSearch(this.state.city); 
           this.setState({city:''})
           }}
           >
