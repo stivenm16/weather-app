@@ -7,8 +7,6 @@ class Nav extends React.Component {
       this.state = {
         city: ''
       }
-      // onSearch = onSearch.bind(this)
-      // console.log(onSearch('Bogota'))
     }
     updateState = (e) => {
       this.setState({
@@ -18,7 +16,6 @@ class Nav extends React.Component {
     
     render() {
         return (
-
 
           <form 
           className="container-header"

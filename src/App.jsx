@@ -1,7 +1,10 @@
 import React from 'react';
+import { Route } from 'react-router-dom'
+
 import './App.css'
 import Cards from './Components/Cards/Cards'
 import Nav from './Components/SearchBar/Nav'
+import City from './Components/City/City'
 
 
 class App extends React.Component {
@@ -11,13 +14,19 @@ class App extends React.Component {
       cities: []
     }
     this.onSearch = this.onSearch.bind(this)
-    
-    
   }
 
-  
   onClose = (id)  => {
     this.setState({cities : this.state.cities.filter(c => c.id !== id)});
+  }
+
+  onFilter = (ciudadId) => {
+    let ciudad = this.state.cities.filter(c => c.id === parseInt(ciudadId));
+    if(ciudad.length > 0) {
+        return ciudad[0];
+    } else {
+        return null;
+    }
   }
 
   onSearch = (ciudad) => {
@@ -29,7 +38,7 @@ class App extends React.Component {
     .then(r => r.json())
     .then((recurso) => {
       
-      if(recurso.main !== undefined  ){ // && repeated === false
+      if(recurso.main !== undefined){
         const ciudad = {
           min: Math.round(recurso.main.temp_min),
           max: Math.round(recurso.main.temp_max),
@@ -57,13 +66,29 @@ class App extends React.Component {
   render(){
       return (
         <div>
-        <Nav
-        onSearch={this.onSearch}
+          <Route
+          path='/'
+          render={() => <Nav
+            onSearch={this.onSearch}
+            />}
+          />
+
+          <Route
+          exact path='/'
+          render={() => <Cards
+            cities = {this.state.cities}
+            onClose = {this.onClose}
+            />}
+          />
+          
+          <Route
+          exact path='/ciudad/:ciudadId'
+          render={(props) => <City
+          city={onFilter(props.match.params.ciudadId)}
+          />}
         />
-        <Cards
-        cities = {this.state.cities}
-        onClose = {this.onClose}
-        />
+        
+        
         </div>
         
       )
