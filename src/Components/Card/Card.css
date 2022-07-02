@@ -71,3 +71,38 @@
 .card-title {
     text-decoration: none;
 }
+
+
+
+@media screen and (max-width: 400px) {
+    .card {
+      width: 15rem;
+      align-items: center;
+      height: 9.5rem;
+    }
+    .temp-min, .temp-max {
+        
+        height: 4.5rem;
+
+    }
+    .container-bottom{
+        margin-top: 1.7rem;
+    }
+    .temps{
+        margin: 0 0 1rem ;
+        padding-bottom: .5rem;
+
+    }
+
+    .title {
+        font-size: 34px;
+        margin-top: 1.2rem;
+
+    }
+
+    .temps-m {
+        padding-top: .5rem;
+    }
+    
+  }
+  

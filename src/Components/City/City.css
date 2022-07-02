@@ -7,7 +7,7 @@
 }
 
 .container-city {
-    background-color: #FFF;
+    background-color: rgba(255, 255, 255, 0.774);
     width: 35%;
     flex-direction: column;
     display: flex;
@@ -17,6 +17,8 @@
     transition: 1s;
     
 }
+
+
 
 .return{
     margin: 1.5rem;
@@ -62,6 +64,7 @@
     margin-bottom: 1rem;
     margin-top: 0;
     transition: 1s;
+    color: #2D3047;
 }
 
 .title-city:hover {
@@ -73,11 +76,13 @@
 .temp-exact{
     transition: .2s;
     cursor:default;
+    background-color: #161c4dad;
+    padding: .3rem;
+    border-radius: 8px;
+    color: #FFF;
 }
 
 .temp-exact:hover {
-    font-weight: 400;
-    color: #2D3047;
     transform: translateY(-1px);
 }
 
@@ -98,3 +103,5 @@
     gap: 0;
     
 }
+
+

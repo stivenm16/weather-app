@@ -77,3 +77,21 @@
     outline: none;
     box-shadow: 1px 2px 8px -1px #2D3047;
 }
+
+@media screen and (max-width: 400px) {
+    .box {
+        width: 85%;
+        height: 12vh;
+    }    
+    .input {
+        height: 5vh;
+        border-radius: 6px;
+    }
+
+    .submit {
+        width: 25%;
+        margin-right: 1rem;
+        height: 6vh;
+        border-radius: 6px;
+    }
+}

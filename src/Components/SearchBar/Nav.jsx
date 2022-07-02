@@ -20,7 +20,9 @@ class Nav extends React.Component {
         return (
 
             <div className="header">
+              <a href="https://github.com/stivenm16/weather-app" target='_blank'>
               <img src={Logo} alt="" className="icon-github" />
+              </a>
               <form 
               className="container-header"
               onSubmit={(e) => {
