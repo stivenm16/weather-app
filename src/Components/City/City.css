@@ -18,6 +18,27 @@
     
 }
 
+.return{
+    margin: 1.5rem;
+    margin-right: auto;
+    margin-bottom: 0;
+}
+.return-btn {
+    background-color:  #2D3047;
+    color: #FFF;
+    border: none;
+    border-radius: 8px;
+    min-height: 2rem;
+    font-size: 18px;
+    width: 3rem;
+    transition: 1s;
+    
+}
+
+.return-btn:hover {
+    cursor: pointer;
+    transform: translateY(-2px);
+}
 .container:hover {
     transform: translateY(-3px);
 }
@@ -39,7 +60,7 @@
     position: relative;
     font-size: 28px;
     margin-bottom: 1rem;
-    margin-top: 1.5rem;
+    margin-top: 0;
     transition: 1s;
 }
 
