@@ -1,5 +1,6 @@
 import React from 'react';
 import './City.css'
+import {Link} from 'react-router-dom'
 
 
 class City extends React.Component {
@@ -12,6 +13,9 @@ class City extends React.Component {
 
             <div className='city'>
                <div className="container-city">
+                <Link to={`/`} >
+                <button className='return-button'>Return</button>
+                </Link>
                 <h2 className="title-city">{this.props.city.name}</h2>
                 
                 

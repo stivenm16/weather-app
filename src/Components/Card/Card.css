@@ -16,6 +16,7 @@
 
 .card:hover{
     transform: translateY(-3px);
+    
 }
 
 .close-btn{
@@ -39,7 +40,7 @@
     padding-left: 2.5rem;
     padding-right: 2.5rem;
     border-radius: 12px;   
-    margin-top: 4.5rem;
+    margin-top: 3rem;
 
 }
 
@@ -60,7 +61,7 @@
 
 .title {
     /* position: absolute; */
-    font-size: 30px;
+    font-size: 40px;
     text-decoration: none;
     color: #2D3047;
     margin-bottom:0 ;
