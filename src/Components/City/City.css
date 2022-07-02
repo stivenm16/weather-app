@@ -4,6 +4,7 @@
     align-items: center;
     cursor: default;
     margin-bottom: 1rem;
+    width: auto;
 }
 
 .container-city {
@@ -104,4 +105,34 @@
     
 }
 
+@media screen and (max-width: 700px)  {
+       .container-city {
+        width: 18rem;
+        height: 70vh;
+       }
+
+       .wind-box, .lat-box {
+        min-width: 3.5rem;
+        min-height: 3.5rem;
+        margin: 0;
+        margin-bottom: 1rem;
+        border-radius: 10px;
+       }
+       .wind-box p, .lat-box p{
+        margin: .2rem;
+        font-size: 12px;
+       }
+
+       .container-temp {
+        gap: 1rem;
+        font-size: 14px;
+        margin: 5px;
+        margin-bottom: 0;
+       }
+       .return-btn {
+        margin-top: .5rem;
+        width: 3rem;
+        height: 2rem;
+       }
+}
 
