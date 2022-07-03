@@ -22,9 +22,9 @@ class City extends React.Component {
                 
                 
                 <div className="container-temp">
-                    <p className='temp-exact'>Temp: {this.props.city.temp}°</p>
-                    <p className='temp-exact'>Temp max: {this.props.city.max}°</p>
-                    <p className='temp-exact'>Temp min: {this.props.city.min}°</p>
+                    <p className='temp-exact'>Temp: {this.props.city.temp}°C</p>
+                    <p className='temp-exact'>Temp max: {this.props.city.max}°C</p>
+                    <p className='temp-exact'>Temp min: {this.props.city.min}°C</p>
                 </div>
                 <img className="iconoClima" src={"http://openweathermap.org/img/wn/"+this.props.city.img+"@2x.png"} width="80" height="80" alt="" />    
                 <div className="container-bottom-city">
